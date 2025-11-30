@@ -1,0 +1,6 @@
+flask
+flask-cors
+requests
+# Optional (only needed if you want the real Vision/Market/Knowledge agents to work):
+google-cloud-aiplatform
+vertexai
