@@ -1,3 +1,4 @@
+# (Get Your own key.json(As it not included in repo) file from the google cloud)
 # 🌱 AgroGen — AI-Powered Multi-Agent Agriculture Assistant
 
 AgroGen is an AI-powered multi-agent system designed to empower farmers with insights on crop health, weather conditions, market prices, and actionable recommendations. It uses state-of-the-art AI models and government data sources to provide reliable, real-time agricultural intelligence.
@@ -100,3 +101,4 @@ Follow this step-by-step guide:
 
 ```bash
 export GOOGLE_APPLICATION_CREDENTIALS="key.json"
+
