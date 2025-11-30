@@ -1,0 +1,138 @@
+:root{
+  --bg:#f6f8f5;
+  --panel:#ffffff;
+  --muted:#657070;
+  --primary-1:#2b8a5f; /* deep green */
+  --primary-2:#65c37d; /* lighter green */
+  --accent:#8bd3c7;
+  --card-shadow: 0 8px 24px rgba(16, 24, 32, 0.08);
+  --radius:14px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+    font-family: Inter, Segoe UI, Roboto, Arial, sans-serif;
+    background: url('https://www.agrivi.com/wp-content/uploads/2014/05/Blog-How-to-be-a-Farmer.png') center/cover fixed;
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
+    display: relative;
+    text-align: relative;
+    padding: 2rem;
+    color: #f6f8f5; /* light text to contrast with the dark overlay */
+}
+
+/* overlay to darken the background and make text more readable */
+body::before{
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ensure content sits above the overlay */
+body > *{
+    position: relative;
+    z-index: 1;
+}
+
+.nav{
+  background: #f3efe0; /* cream panel */
+  padding: 12px 18px;
+  width: 1150px;
+  justify-self: center;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(16,24,32,0.12);
+  color: #0f3e33;
+  margin-bottom: 18px;
+}
+
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px}
+.logo-badge{width:56px;height:56px;border-radius:12px;background:#ffffff;border:1px solid rgba(16,24,32,0.06);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(16,24,32,0.06)}
+.brand-logo{height:44px;width:auto;display:block}
+.brand-icon{color:var(--primary-1)}
+.brand-text{font-weight:800;letter-spacing:0.2px;color:#0f3e33;margin-left:6px}
+
+.nav-links{display:flex;gap:18px;align-items:center}
+.nav-link{color:#0f3e33;text-decoration:none;font-weight:600;padding:8px 6px;border-radius:8px}
+.nav-link:hover{background:rgba(15,62,51,0.04)}
+
+.nav-cta .contact{background:#0f5b44;color:white;border-radius:999px;padding:10px 18px;border:none;box-shadow:0 6px 18px rgba(15,91,68,0.12);font-weight:800}
+
+/* collapse nav on small screens */
+@media (max-width:720px){
+  .nav-inner{flex-direction:row;gap:10px}
+  .nav-links{display:none}
+}
+
+.app{max-width:1100px;margin:22px auto;padding:18px;display:grid;grid-template-columns:1fr 420px;gap:20px}
+.panel{padding:0}
+.panel-form .heading{margin:8px 0 4px;font-size:20px}
+.panel-form .sub{color:white;margin:0 0 14px}
+
+.card{background:var(--panel);border-radius:var(--radius);padding:18px;box-shadow:var(--card-shadow);border:1px solid rgba(16,24,32,0.03);color:#0f3430}
+
+.upload-card{display:flex;flex-direction:column;gap:14px}
+.upload-zone{border:2px dashed rgba(16,24,32,0.06);border-radius:12px;padding:18px;display:flex;align-items:center;justify-content:center;min-height:160px;cursor:pointer;background:linear-gradient(180deg, rgba(107,188,149,0.04), rgba(255,255,255,0.02))}
+.upload-zone input[type="file"]{display:none !important}
+.upload-inner{display:flex;align-items:center;gap:16px}
+.upload-icon svg{color:var(--primary-1)}
+.upload-text .muted{color:var(--muted);font-size:14px}
+.btn{padding:10px 14px;border-radius:10px;border:none;cursor:pointer;font-weight:600}
+.btn.gradient{background:linear-gradient(90deg,var(--primary-1),var(--primary-2));color:white}
+.btn.ghost{background:green;color:white;;border:1px solid rgba(255, 255, 255, 0.06)}
+.btn.small{padding:6px 8px;font-size:13px}
+.btn.big{padding:12px 18px;font-size:16px}
+.pill.gradient-small{background:linear-gradient(90deg,var(--primary-1),var(--primary-2));color:white;border:none}
+
+.preview{display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+.upload-logo{height:56px;width:auto;max-width:120px;margin-bottom:8px}
+.preview img{max-width:220px;border-radius:8px;object-fit:cover;border:1px solid rgba(16,24,32,0.04)}
+
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.form-field{display:flex;flex-direction:column;gap:6px}
+.label{font-size:13px;color:#0f3430}
+.input-icon{position:relative}
+.input-icon .icon{position:absolute;left:10px;top:10px;color:var(--muted)}
+.input-icon input,
+.input-icon select{width:100%;padding:10px 12px 10px 36px;border-radius:10px;border:1px solid rgba(16,24,32,0.06);background:transparent}
+.suggestions{list-style:none;margin:6px 0 0;padding:6px;border-radius:8px;background:#fff;box-shadow:var(--card-shadow);max-height:160px;overflow:auto}
+.suggestions li{padding:8px 10px;border-radius:6px;cursor:pointer}
+.suggestions li:hover{background:linear-gradient(90deg,var(--primary-2),rgba(139,211,199,0.08));}
+
+.actions{display:flex;justify-content:flex-end}
+
+.panel-results{padding:12px}
+.results-header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
+.result-grid{display:grid;grid-template-columns:1fr;gap:12px}
+.result-card{padding:12px;border-radius:10px;color:#0f3430}
+
+.result-card h3{color:rgba(15,62,51,0.95);margin:0 0 8px;font-size:16px}
+.weather-card .muted{color:var(--muted)}
+
+.disease-name{font-size:20px;font-weight:700;margin-top:6px}
+.severity{display:inline-block;margin-top:8px;padding:6px 10px;border-radius:999px;color:white;font-weight:700}
+.severity.low{background:linear-gradient(90deg,#6fdc97,#3ab67b)}
+.severity.medium{background:linear-gradient(90deg,#ffb86b,#ff8a4b)}
+.severity.high{background:linear-gradient(90deg,#ff7b7b,#ff3b3b)}
+.recommendation{margin-top:10px;color:#0f3430}
+
+.confidence{margin-top:12px}
+.confidence-label{font-size:13px;color:var(--muted);margin-bottom:6px}
+.confidence-bar{height:12px;background:linear-gradient(90deg,#e9f6ee,#f4fcf9);border-radius:999px;border:1px solid rgba(16,24,32,0.04);overflow:hidden}
+.confidence-fill{height:100%;background:linear-gradient(90deg,var(--primary-1),var(--primary-2));width:0%}
+
+.weather-card .muted{color:var(--muted)}
+.market-card ul{padding-left:16px;margin:6px 0}
+
+.footer{text-align:center;color:var(--muted);font-size:13px;padding:18px 0}
+
+@media (max-width:980px){
+  .app{grid-template-columns:1fr;padding:12px}
+  .app .panel-results{order:2}
+}
+
