@@ -1,4 +1,4 @@
-# (Get Your own key.json(As it not included in repo) file from the google cloud, Also enter your own OPENWEATHER API KEY AND DATA.gov API key from the respective website as mentioned below)
+# (Get Your own key.json[As it not included in repo] file from the google cloud, Also enter your own OPENWEATHER API KEY AND DATA.gov API key from the respective website as mentioned below)
 # 🌱 AgroGen — AI-Powered Multi-Agent Agriculture Assistant
 
 AgroGen is an AI-powered multi-agent system designed to empower farmers with insights on crop health, weather conditions, market prices, and actionable recommendations. It uses state-of-the-art AI models and government data sources to provide reliable, real-time agricultural intelligence.
@@ -135,6 +135,7 @@ To fetch datasets from the Indian government’s open data platform, you’ll ne
 
 # Future Work
 In future iterations, AgroGen will be expanded with additional specialized agents such as a Soil Analysis Agent, Fertilizer Recommendation Agent, and Yield Prediction Agent to provide more comprehensive crop intelligence. A long-term Memory Bank will be added so the system can learn from past farmer interactions and deliver personalized advice. Accuracy will be improved through agent-to-agent verification, and a dedicated mobile app with offline mode and voice support in local languages will enhance accessibility. Finally, proactive features like automated weather alerts, disease risk notifications, and market price forecasting will be introduced to help farmers make timely decisions.
+
 
 
 
