@@ -19,16 +19,15 @@ except Exception:
 # =================================================================
 # CONFIGURATION (EDIT THESE)
 # =================================================================
-# Configuration: prefer environment variables; fall back to file defaults.
-PROJECT_ID = os.environ.get("PROJECT_ID", "alien-bruin-478312-q5")
+PROJECT_ID = os.environ.get("PROJECT_ID", "Enter-your-own-projectid-configured-in-google-cloud")
 LOCATION = os.environ.get("LOCATION", "us-central1")
 
 # It's preferable to set `GOOGLE_APPLICATION_CREDENTIALS` outside this file (env)
 if "GOOGLE_APPLICATION_CREDENTIALS" not in os.environ:
     os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = os.environ.get("GOOGLE_APPLICATION_CREDENTIALS", "key.json")
 
-OPENWEATHER_API_KEY = os.environ.get("OPENWEATHER_API_KEY", "59c7e0a874493adca423dc207440fd2a")
-DATA_GOV_API_KEY = os.environ.get("DATA_GOV_API_KEY", "579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b")
+OPENWEATHER_API_KEY = os.environ.get("OPENWEATHER_API_KEY", "Get-your-Openweatherapi-key")
+DATA_GOV_API_KEY = os.environ.get("DATA_GOV_API_KEY", "Get-your-data-Gov-api-key")
 
 IMAGE_PATH = os.environ.get("IMAGE_PATH", "test.jpeg")
 
@@ -393,3 +392,4 @@ if __name__ == "__main__":
     print("\n=============== FINAL OUTPUT ===============")
     print(json.dumps(output, indent=4))
     print("===========================================\n")
+
